@@ -1,0 +1,169 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Lab_15
+{
+    class Program
+    {
+        //Задание 1
+        private static void PowerA3(double a, double b)
+        {
+            b = Math.Pow(a, 3);
+            Console.WriteLine("{0} ", b);
+        }
+
+        //Задание 2
+        private static void SingX(double x)
+        {
+             if(x < 0)
+             {
+                 x = -1;
+                 Console.WriteLine(x);
+             }
+             else if (x == 0)
+             {
+                 x = 0;
+                 Console.WriteLine(x);
+             }
+             else
+             {
+                 x = 1;
+                 Console.WriteLine(x);
+             }
+
+        }
+
+        //Задание 3
+        private static double RingS(double r1, double r2)
+        {
+            return  Math.PI * (r1 * r1 - r2 * r2);
+        }
+
+        //Задание 4
+        private static void Quarter(double x, double y)
+        {
+            if (x > 0 && y > 0)
+            {
+                Console.WriteLine("1-ая четверть");
+                Console.WriteLine();
+            }
+            if (x < 0 && y > 0)
+            {
+                Console.WriteLine("2-ая четверть");
+                Console.WriteLine();
+            }
+            if (x < 0 && y < 0)
+            {
+                Console.WriteLine("3-ая четверть");
+                Console.WriteLine();
+            }
+            if (x > 0 && y < 0)
+            {
+                Console.WriteLine("4-ая четверть");
+                Console.WriteLine();
+            }
+        }
+
+        //Задание 5
+        private static double Fact2(int n)
+        {
+            double result = 1;
+            if (n % 2 == 0)
+            {
+                for (int i = 2; i <= n; i += 2)
+                {
+                    result *= (double)i;
+                }
+                Console.WriteLine(result);
+            }
+
+            else
+            {
+                for (int i = 1; i <= n; i += 2)
+                {
+                    result *= (double)i;
+                }
+                Console.WriteLine(result);
+            }
+            return result;
+        }
+
+        static void Main(string[] args)
+        {
+            /*
+             Console.Write("№1. Описать функцию PowerA3(A, B), вычисляющую третью степень числа A и возвращающую ее в переменной B (A — входной, B — выходной параметр; оба параметра являются вещественными). С помощью этой функции найти третьи степени пяти данных чисел.");
+             double b = 0;
+            for (int i = 1; i < 6; i++)
+            {
+                Console.WriteLine("A {0}: ", i);
+                double a = Convert.ToInt32(Console.ReadLine());
+                PowerA3(a, b);
+            }
+            */
+
+            /*
+            Console.Write("№2. Описать функцию Sign(X) целого типа, возвращающую для вещественного числа X следующие значения: −1, если X < 0; 0, если X = 0; 1, если X > 0. С помощью этой функции найти значение выражения Sign(A) + Sign(B) для данных вещественных чисел A и B.");
+            Console.Write("X = ");
+            double x = Convert.ToDouble(Console.ReadLine());
+            SingX(x);
+            Console.Write("A = ");
+            double a = Convert.ToDouble(Console.ReadLine());
+            Console.Write("B = ");
+            double b = Convert.ToDouble(Console.ReadLine());
+            double sum = Math.Sign(a) + Math.Sign(b);
+            Console.WriteLine(sum);
+            */
+
+            /*
+            Console.WriteLine("№3. Описать функцию RingS(R1, R2) вещественного типа, находящую площадь кольца, заключенного между двумя окружностями с общим центром и радиусами R1 и R2 (R1 и R2 — вещественные, R1 > R2). С ее помощью найти площади трех колец, для которых даны внешние и внутренние радиусы.");
+            Console.WriteLine();
+                for (int i = 1; i < 4; i++)
+                {
+                    Console.WriteLine("Введите внешний радиус {0}: ", i);
+                    double r1 = double.Parse(Console.ReadLine());
+                    Console.WriteLine("Введите внутрений радиус {0}: ", i);
+                    double r2 = double.Parse(Console.ReadLine());
+                    double s;
+                    if (r1 > r2)
+                    {
+                        s = RingS(r1, r2);
+                        Console.WriteLine(" {0}: ", s);
+                    }
+                    else
+                        Console.WriteLine("Указан радиус внешнего кольца, меньший, чем радиус внутренного!");
+                }
+            */
+
+
+            /*
+            Console.WriteLine("№4. Описать функцию Quarter(x, y) целого типа, определяющую номер координатной четверти, в которой находится точка с ненулевыми вещественными координатами (x, y). С помощью этой функции найти номера координатных четвертей для трех точек с данными ненулевыми координатами.");
+            Console.WriteLine();
+            for (int i = 1; i < 4; i++)
+            {
+                Console.WriteLine("Х {0}: ", i);
+                double x = double.Parse(Console.ReadLine());
+                Console.WriteLine("Y {0}: ", i);
+                double y = double.Parse(Console.ReadLine());
+                if (x != 0 && y != 0)
+                    Quarter(x, y);
+                else
+                    Console.WriteLine("Коодринаты должны быть ненулевыми!");
+            }
+            */
+
+            /*
+            Console.WriteLine("№5. Описать функцию Fact2(N) вещественного типа, вычисляющую двойной факториал: N!! = 1·3·5·. . .·N, если N — нечетное; N!! = 2·4·6·. . .·N, если N — четное ");
+            Console.Write("N = ");
+            int n = Int32.Parse(Console.ReadLine());
+            if (n > 0)
+                Fact2(n);
+
+            else
+                Console.WriteLine("!!! N>0 !!!");
+            */
+
+        }
+    }
+}
