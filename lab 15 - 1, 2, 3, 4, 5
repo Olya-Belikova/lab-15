@@ -15,22 +15,22 @@ namespace Lab_15
         }
 
         //Задание 2
-        private static void SingX(double x)
+           private static void SingX(double sum)
         {
-             if(x < 0)
+             if(sum < 0)
              {
-                 x = -1;
-                 Console.WriteLine(x);
+                sum = -1;
+                 Console.WriteLine(sum);
              }
-             else if (x == 0)
+             else if (sum == 0)
              {
-                 x = 0;
-                 Console.WriteLine(x);
+                sum = 0;
+                 Console.WriteLine(sum);
              }
              else
              {
-                 x = 1;
-                 Console.WriteLine(x);
+                sum = 1;
+                 Console.WriteLine(sum);
              }
 
         }
@@ -105,15 +105,13 @@ namespace Lab_15
 
             /*
             Console.Write("№2. Описать функцию Sign(X) целого типа, возвращающую для вещественного числа X следующие значения: −1, если X < 0; 0, если X = 0; 1, если X > 0. С помощью этой функции найти значение выражения Sign(A) + Sign(B) для данных вещественных чисел A и B.");
-            Console.Write("X = ");
-            double x = Convert.ToDouble(Console.ReadLine());
-            SingX(x);
+            Console.WriteLine();
             Console.Write("A = ");
             double a = Convert.ToDouble(Console.ReadLine());
             Console.Write("B = ");
             double b = Convert.ToDouble(Console.ReadLine());
             double sum = Math.Sign(a) + Math.Sign(b);
-            Console.WriteLine(sum);
+            SingX(sum);
             */
 
             /*
